@@ -157,7 +157,7 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
   .team-card { flex: 0 0 72vw; max-width: 280px; scroll-snap-align: start; border-right: 1px solid var(--border); border-top: none !important; }
   .team-card:last-child { border-right: none; }
   .team-card::after { display: none; }
-  .text-photo-grid .about-photo-col { flex-direction: row; align-items: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; gap: 12px; margin-left: -24px; margin-right: -24px; padding-left: 24px; padding-right: 24px; scrollbar-width: none; }
+  .text-photo-grid .about-photo-col { display: flex; flex-direction: row; align-items: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; gap: 12px; margin-left: -24px; margin-right: -24px; padding-left: 24px; padding-right: 24px; scrollbar-width: none; }
   .text-photo-grid .about-photo-col::-webkit-scrollbar { display: none; }
   .text-photo-grid .about-photo-col .photo { flex: 0 0 75vw; max-width: 300px; scroll-snap-align: start; }
   .contact-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
@@ -202,7 +202,7 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
     <div class="text-col">
       <div class="sec-label">About ID43 Creative</div>
       <h2 class="sec-title">Storytellers Built for the Outdoors</h2>
-      <p class="body-text">ID43 Creative is a Boise-based production agency with over four decades of combined experience crafting high-impact content for brands that live and breathe the outdoors. Our team excels in placing brands in the middle of real adventures, real conditions, and real chaos.</p>
+      <p class="body-text">ID43 Creative is a production agency with over four decades of combined experience crafting high-impact content for brands that live and breathe the outdoors. Our team excels in placing brands in the middle of real adventures, real conditions, and real chaos.</p>
       <p class="body-text" style="margin-top:16px;">From FPV drone footage to cinematography to creative direction, we have the crew, the gear, and the drive to make Turtlebox the undeniable hero of every frame.</p>
       <div class="stats-row">
         <div><div class="stat-num">40+</div><div class="stat-label">Years Combined Experience</div></div>
@@ -342,7 +342,8 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
       </div>
       <div class="photo-eyebrow-spacer"></div>
       <div class="photo-col">
-        <div class="photo" style="aspect-ratio:3/2;"><img src="Turtlebox 3.jpg" alt="Turtlebox"></div>      </div>
+        <div class="photo" style="aspect-ratio:3/2;"><img src="Turtlebox 3.jpg" alt="Turtlebox"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -359,7 +360,8 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
     </div>
     <div class="photo-eyebrow-spacer"></div>
     <div class="photo-col">
-      <div class="photo" style="aspect-ratio:3/2;"><img src="Behind the Scenes.jpg" alt="ID43 Creative Staff Behind the Scenes"></div>    </div>
+      <div class="photo" style="aspect-ratio:3/2;"><img src="Behind the Scenes.jpg" alt="ID43 Creative Staff Behind the Scenes"></div>
+    </div>
   </div>
 </div>
 
