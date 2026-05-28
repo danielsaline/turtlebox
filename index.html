@@ -157,9 +157,9 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
   .team-card { flex: 0 0 72vw; max-width: 280px; scroll-snap-align: start; border-right: 1px solid var(--border); border-top: none !important; }
   .team-card:last-child { border-right: none; }
   .team-card::after { display: none; }
-  .about-photo-col { display: flex !important; flex-direction: row !important; align-items: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; gap: 12px; margin-left: -24px; margin-right: -24px; padding-left: 24px; padding-right: 24px; scrollbar-width: none; width: calc(100% + 48px); }
-  .about-photo-col::-webkit-scrollbar { display: none; }
-  .about-photo-col .photo { flex: 0 0 75vw !important; max-width: 300px; scroll-snap-align: start; aspect-ratio: 3/2 !important; }
+  .text-photo-grid .about-photo-col { flex-direction: row; align-items: flex-start; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; gap: 12px; margin-left: -24px; margin-right: -24px; padding-left: 24px; padding-right: 24px; scrollbar-width: none; }
+  .text-photo-grid .about-photo-col::-webkit-scrollbar { display: none; }
+  .text-photo-grid .about-photo-col .photo { flex: 0 0 75vw; max-width: 300px; scroll-snap-align: start; }
   .contact-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
   .close-foot { flex-direction: column; gap: 8px; }
 }
