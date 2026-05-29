@@ -59,7 +59,8 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
 
 /* ── PHOTO ── */
 .photo { display: block; position: relative; overflow: hidden; background: var(--light); }
-.photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.5s ease; }
+.photo:hover img { transform: scale(1.04); }
 .photo-placeholder { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
 .photo-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid); }
 .dark-section .photo { background: rgba(255,255,255,0.06); }
@@ -128,6 +129,17 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
 .contact-val { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.7); letter-spacing: 0.04em; }
 .close-foot { margin-top: 80px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; }
 .close-foot-text { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.15); }
+
+
+/* ── SCROLL FADE IN ── */
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.fade-up.delay-1 { transition-delay: 0.1s; }
+.fade-up.delay-2 { transition-delay: 0.2s; }
+.fade-up.delay-3 { transition-delay: 0.3s; }
+.fade-up.delay-4 { transition-delay: 0.4s; }
+.fade-up.delay-5 { transition-delay: 0.5s; }
+.fade-up.delay-6 { transition-delay: 0.6s; }
 
 /* ══ MOBILE ≤768px ══ */
 @media (max-width: 768px) {
@@ -200,14 +212,14 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
 <div class="wrap">
   <div class="text-photo-grid">
     <div class="text-col">
-      <div class="sec-label">About ID43 Creative</div>
-      <h2 class="sec-title">Storytellers Built for the Outdoors</h2>
-      <p class="body-text">ID43 Creative is a Boise-based production agency with over four decades of combined experience crafting high-impact content for brands that live and breathe the outdoors. Our team excels in placing brands in the middle of real adventures, real conditions, and real chaos.</p>
-      <p class="body-text" style="margin-top:16px;">From FPV drone footage to cinematography to creative direction, we have the crew, the gear, and the drive to make Turtlebox the undeniable hero of every frame.</p>
+      <div class="sec-label fade-up">About ID43 Creative</div>
+      <h2 class="sec-title fade-up delay-1">Storytellers Built for the Outdoors</h2>
+      <p class="body-text fade-up delay-2">ID43 Creative is a production agency with over four decades of combined experience crafting high-impact content for brands that live and breathe the outdoors. Our team excels in placing brands in the middle of real adventures, real conditions, and real chaos.</p>
+      <p class="body-text fade-up delay-3" style="margin-top:16px;">From FPV drone footage to cinematography to creative direction, we have the crew, the gear, and the drive to make Turtlebox the undeniable hero of every frame.</p>
       <div class="stats-row">
-        <div><div class="stat-num">40+</div><div class="stat-label">Years Combined Experience</div></div>
-        <div><div class="stat-num">44K</div><div class="stat-label">Avg Views Per Post</div></div>
-        <div><div class="stat-num">32%</div><div class="stat-label">Follower Growth, One Campaign</div></div>
+        <div class="fade-up delay-1"><div class="stat-num">40+</div><div class="stat-label">Years Combined Experience</div></div>
+        <div class="fade-up delay-2"><div class="stat-num">44K</div><div class="stat-label">Avg Views Per Post</div></div>
+        <div class="fade-up delay-3"><div class="stat-num">32%</div><div class="stat-label">Follower Growth, One Campaign</div></div>
       </div>
     </div>
     <div class="photo-eyebrow-spacer"></div>
@@ -224,8 +236,8 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
 <div class="wrap">
   <div class="text-photo-grid">
     <div class="text-col">
-      <div class="sec-label">30 Seconds. No Excuses.</div>
-      <h2 class="sec-title">The Concept</h2>
+      <div class="sec-label fade-up">30 Seconds. No Excuses.</div>
+      <h2 class="sec-title fade-up delay-1">The Concept</h2>
       <p class="body-text">Our goal is to create a visceral, fast-cut 30-second spot that takes Turtlebox from a trail to the bottom of a river, through a welding shop, to a bonfire, and proves the speaker never flinches.</p>
       <p class="body-text" style="margin-top:16px;">This spot showcases Turtlebox's durability, battery life, and performance in the most challenging locations.</p>
       <p class="body-text" style="margin-top:16px;">Every environment is deliberately extreme. Every shot is designed to make the viewer realize: the music is still going.</p>
@@ -247,11 +259,11 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
 <!-- SCENES -->
 <hr class="sec-divider">
 <div class="wrap">
-  <div class="sec-label">The Shot List</div>
-  <h2 class="sec-title">Scene by Scene</h2>
+  <div class="sec-label fade-up">The Shot List</div>
+  <h2 class="sec-title fade-up delay-1">Scene by Scene</h2>
   <p class="scroll-hint">Swipe to explore &rarr;</p>
   <div class="scenes-grid">
-    <div class="scene-card">
+    <div class="scene-card fade-up delay-1">
       <div class="scene-photo"><img src="Bike 3.jpg" alt="Bike on a river trail"></div>
       <div class="scene-content">
         <span class="scene-num">Scene 01</span>
@@ -266,7 +278,7 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
         </ul>
       </div>
     </div>
-    <div class="scene-card">
+    <div class="scene-card fade-up delay-2">
       <div class="scene-photo"><img src="Pool Party.jpg" alt="Pool Party"></div>
       <div class="scene-content">
         <span class="scene-num">Scene 02</span>
@@ -282,7 +294,7 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
         </ul>
       </div>
     </div>
-    <div class="scene-card">
+    <div class="scene-card fade-up delay-3">
      <div class="scene-photo"><img src="Welding 2.jpg" alt="Welding Shop"></div>
       <div class="scene-content">
         <span class="scene-num">Scene 03</span>
@@ -296,7 +308,7 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
         </ul>
       </div>
     </div>
-    <div class="scene-card">
+    <div class="scene-card fade-up delay-4">
      <div class="scene-photo"><img src="Bonfire.jpg" alt="Bonfire"></div>
       <div class="scene-content">
         <span class="scene-num">Scene 04</span>
@@ -312,7 +324,7 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
         </ul>
       </div>
     </div>
-    <div class="scene-card">
+    <div class="scene-card fade-up delay-5">
      <div class="scene-photo"><img src="Stars.jpg" alt="Starry Night Sky"></div>
       <div class="scene-content">
         <span class="scene-num">Scene 05</span>
@@ -334,8 +346,8 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
   <div class="wrap">
     <div class="text-photo-grid">
       <div class="text-col">
-        <div class="sec-label">The Partnership</div>
-        <h2 class="sec-title">What We're Asking For</h2>
+        <div class="sec-label fade-up">The Partnership</div>
+        <h2 class="sec-title fade-up delay-1">What We're Asking For</h2>
         <p class="body-text">We'd love to partner with Turtlebox by featuring your speakers as hero products throughout the production. If possible, we'd appreciate receiving one unit of each speaker model for use during filming, though we completely understand availability may vary.</p>
         <p class="body-text" style="margin-top:16px;">At minimum, the Original Gen 3 would play a key role in several planned underwater and durability-focused sequences central to the concept.</p>
         <p class="body-text" style="margin-top:16px;">In exchange, ID43 Creative will produce and deliver a polished, broadcast-ready 30-second commercial spot showcasing the product in a cinematic, real-world environment.</p>
@@ -353,8 +365,8 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
 <div class="wrap">
   <div class="text-photo-grid">
     <div class="text-col">
-      <div class="sec-label">What We're Building</div>
-      <h2 class="sec-title">The Deliverable</h2>
+      <div class="sec-label fade-up">What We're Building</div>
+      <h2 class="sec-title fade-up delay-1">The Deliverable</h2>
       <p class="body-text">ID43 Creative is ready to create fully produced 30-second commercial spot. Shot on location across multiple environments, edited with precision, and delivered ready for broadcast and social distribution.</p>
       <p class="body-text" style="margin-top:16px;">This is a complete commercial production, the kind of content Turtlebox can run anywhere you choose.</p>
     </div>
@@ -368,36 +380,36 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
 <!-- TEAM -->
 <hr class="sec-divider">
 <div class="wrap">
-  <div class="sec-label">The Crew</div>
-  <h2 class="sec-title">Who's Behind the Camera</h2>
+  <div class="sec-label fade-up">The Crew</div>
+  <h2 class="sec-title fade-up delay-1">Who's Behind the Camera</h2>
   <p class="scroll-hint">Swipe to explore &rarr;</p>
   <div class="team-grid">
-    <div class="team-card">
+    <div class="team-card fade-up delay-1">
       <div class="team-name">Joel Schneider</div>
       <div class="team-role">Managing Director</div>
       <p class="team-bio">Co-founder with expertise in high-visibility content creation, demand generation marketing, and strategic planning. Your primary point of contact.</p>
     </div>
-    <div class="team-card">
+    <div class="team-card fade-up delay-2">
       <div class="team-name">Gavin Izzard</div>
       <div class="team-role">Creative Producer, Long Form</div>
       <p class="team-bio">Leads long-form video projects with a focus on storytelling, emotional impact, and polished execution across documentary and branded content.</p>
     </div>
-    <div class="team-card">
+    <div class="team-card fade-up delay-3">
       <div class="team-name">Kyle Moeller</div>
       <div class="team-role">Creative Producer, Aerial & Short Form</div>
       <p class="team-bio">Premier FPV drone pilot in the Western United States. Specializes in short-form social editing and creative aerial cinematography.</p>
     </div>
-    <div class="team-card">
+    <div class="team-card fade-up delay-4">
       <div class="team-name">Josh Schneider</div>
       <div class="team-role">Director of Photography</div>
       <p class="team-bio">Versatile videographer experienced in short-form social content and long-form storytelling, creating engaging visuals aligned with client strategy and brand goals.</p>
     </div>
-    <div class="team-card">
+    <div class="team-card fade-up delay-5">
       <div class="team-name">Marcus Slack</div>
       <div class="team-role">Freelance Videographer</div>
       <p class="team-bio">Videographer experienced in FPV drones and cinematography systems with the range to deliver dynamic visuals and commercial-grade content.</p>
     </div>
-    <div class="team-card">
+    <div class="team-card fade-up delay-6">
       <div class="team-name">Daniel Saline</div>
       <div class="team-role">Creative Director, Project Strategy</div>
       <p class="team-bio">Leads creative direction and strategic planning across client campaigns, aligning storytelling, production, and brand objectives to deliver high-impact, results-driven content.</p>
@@ -427,6 +439,20 @@ body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(-
     </div>
   </div>
 </div>
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
